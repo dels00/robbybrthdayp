@@ -1,1 +1,131 @@
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  color:white;
+  background:linear-gradient(270deg,#a6d8ff,#cdeaff,#a6d8ff);
+  background-size:600% 600%;
+  animation:bg 12s infinite;
+}
 
+@keyframes bg{ 0%{background-position:0 50%} 50%{background-position:100% 50%} 100%{background-position:0 50%} }
+
+.fade{animation:fade 1s} @keyframes fade{from{opacity:0}to{opacity:1}}
+
+.container{padding:40px;text-align:center}
+
+nav{background:rgba(0,0,0,0.3);padding:12px} nav a{color:white;margin:10px;text-decoration:none;font-weight:bold}
+.foto{
+  width:260px;
+  border-radius:20px;
+  box-shadow:
+    0 0 15px #fff,
+    0 0 30px #7ccfff,
+    0 0 50px #6ec6ff;
+}
+
+.btn{ padding:12px 25px; border:none; border-radius:20px; background:white; color:#7ccfff; font-weight:bold; cursor:pointer; animation:pulse 2s infinite; }
+
+@keyframes pulse{ 0%{transform:scale(1)} 50%{transform:scale(1.1)} 100%{transform:scale(1)} }
+
+.floating{animation:float 4s ease-in-out infinite} @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+
+.kado{width:220px;cursor:pointer} .bounce{animation:bounce 2s infinite} @keyframes bounce{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+
+.card{background:white;color:black;padding:15px;border-radius:15px;display:inline-block}
+
+.timer{font-size:22px;font-weight:bold}
+
+.musicBtn{ position:fixed; bottom:20px; right:20px; padding:10px 15px; border:none; border-radius:50%; font-size:20px; cursor:pointer; }
+
+.love{display:none;font-size:70px;animation:beat 1s infinite} @keyframes beat{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.2)} }
+
+canvas{position:fixed;top:0;left:0;pointer-events:none}
+
+.romantic{
+  background:linear-gradient(135deg,#dff3ff,#bfe6ff);
+  min-height:100vh;
+}
+
+.pesanBox{
+  background:linear-gradient(135deg,#ffffff,#bfe6ff);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.glow{
+  text-align:center;
+  color:#1e3a8a;
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 20px #7ccfff,
+    0 0 35px #6ec6ff;
+}
+.msg{
+  text-align:center;
+  font-size:18px;
+  line-height:1.7;
+  color:black;
+}
+.romanticBtn{
+  background:#6ec6ff;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.romanticBtn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px #a6d8ff;
+}
+.loveBox{
+  display:none;
+  margin-top:20px;
+  text-align:center;
+  font-size:22px;
+  animation:popLove .6s ease forwards;
+}
+
+@keyframes popLove{
+  from{transform:scale(0);}
+  to{transform:scale(1);}
+}
+#bubbleContainer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  pointer-events:none;
+}
+
+.love{
+  position:absolute;
+  bottom:0;
+  color:#7ccfff;
+  font-size:18px;
+  animation:loveFloat 6s linear forwards;
+}
+
+@keyframes loveFloat{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-400px);opacity:0;}
+}
+
+#confetti{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;          /* paling belakang */
+  pointer-events: none;
+  opacity: 0.1;
+}
